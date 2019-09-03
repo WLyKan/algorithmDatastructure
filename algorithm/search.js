@@ -15,7 +15,8 @@ Array.prototype.sequentialSearch = function (item) {
 // 二分搜索
 // eslint-disable-next-line
 Array.prototype.binarySearch = function (item) {
-    this.quickSort()
+    this.quickSort() // 用到了快速排序
+
     let low = 0
     let mid = null
     let element = null

@@ -91,17 +91,17 @@ Array.prototype.mergeSort = function() {
 // eslint-disable-next-line
 Array.prototype.quickSort = function() {
     const partition = (array, left, right) => {
-        const pivot = array[Math.floor(right + left) / 2]
+        const pivot = array[Math.floor(right + left) / 2] // 取中间的位置
         let i = left
         let j = right
         while (i <= j) {
-            while (array[i] < pivot) {
+            while (array[i] < pivot) { // 从前往后找到一个比中位大的数
                 i++
             }
-            while (array[j] > pivot) {
+            while (array[j] > pivot) { // 从后往前找一个比中位小的数
                 j--
             }
-            if (i <= j) {
+            if (i <= j) { // 把大的位置和小的位置交换
                 let aux = array[i]
                 array[i] = array[j]
                 array[j] = aux

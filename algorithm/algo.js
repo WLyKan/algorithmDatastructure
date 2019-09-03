@@ -1,4 +1,5 @@
 // 斐波那契数列
+// @description: 黄金分割曲线
 // @author:King. Date:2019-02-25 14:04
 function fibonacci(num) {
     if (num === 1 || num === 2) {
@@ -29,7 +30,7 @@ class MinCoinChange {
         this.coins.forEach((coin) => {
             newAmount = amount - coin
             if (newAmount >= 0) {
-                newMin = this.makeChange(newAmount)
+                newMin = this.makeChange(newAmount) // 递归调用，返回结果数组
             }
             if (newAmount >= 0
                 && (newMin.length < min.length - 1 || !min.length)
